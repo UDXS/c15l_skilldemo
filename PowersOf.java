@@ -5,7 +5,7 @@ class PowersOf {
     }
 
     int[] powersUntil (int exp) {
-        int[] pows = new int[exp];
+        int[] pows = new int[exp + 1];
         pows[0] = 1;
         for(int i = 1; i <= exp; i++) {
             pows[i] = pows[i - 1] * this.base;
@@ -14,6 +14,6 @@ class PowersOf {
         return pows;        
     }
     int powerAt (int exp) {
-        return powersUntil(exp)[exp - 1];
+        return powersUntil(exp)[exp];
     }
 }
