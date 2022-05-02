@@ -6,7 +6,7 @@ class PowersOf {
 
     int[] powersUntil (int exp) {
         int[] pows = new int[exp];
-        pows[0] = 0; // Should be wrong 
+        pows[0] = 1;
         for(int i = 1; i < exp; i++) {
             pows[i] = pows[i - 1] * this.base;
         }
